@@ -50,7 +50,7 @@ function Skills() {
   const { t } = useLanguage()
 
   return (
-    <section id="Skills" className="min-h-screen px-16 pt-32 pb-24 text-white">
+    <section id="Skills" className="min-h-screen px-6 md:px-16 pt-32 pb-24 text-white">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ function Skills() {
         {t.skillsTitle}
       </motion.h2>
 
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {skills.map((groupe, i) => (
           <motion.div
             key={i}

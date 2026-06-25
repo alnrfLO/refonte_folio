@@ -5,7 +5,7 @@ function Contact() {
   const { t } = useLanguage()
 
   return (
-    <section id="Contact" className="min-h-screen px-16 py-24 text-white flex flex-col items-center justify-center">
+    <section id="Contact" className="min-h-screen px-6 md:px-16 py-24 text-white flex flex-col items-center justify-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-4"
+          className="flex flex-col sm:flex-row flex-wrap justify-center gap-4"
         >
           <a href="mailto:rafael.atns.dev@gmail.com" className="flex flex-col items-center gap-2 px-8 py-4 rounded-2xl bg-red-500/20 border border-red-500/30 hover:bg-red-500/30 transition-all min-w-[140px]">
             <span className="text-2xl">✉️</span>

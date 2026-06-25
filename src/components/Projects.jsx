@@ -88,7 +88,7 @@ function Projects() {
     .filter(p => techno === "Toutes" || p.tech === techno)
 
   return (
-    <section id="Projects" className="min-h-screen px-16 pt-32 pb-24 text-white">
+    <section id="Projects" className="min-h-screen px-6 md:px-16 pt-32 pb-24 text-white">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +143,7 @@ function Projects() {
       </div>
 
       {/* Grille projets */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projectsFiltres.map((p, i) => (
           <motion.div
             key={p.titre}
