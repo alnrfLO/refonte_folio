@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../context/useLanguage'
+import cv from '../assets/CV_Rafael_Antunes_oliveira.pdf'
 
 function Contact() {
   const { t } = useLanguage()
@@ -84,7 +85,7 @@ function Contact() {
             <span className="text-2xl">💼</span>
             <span className="text-white font-semibold text-sm">LinkedIn</span>
           </a>
-          <a href="https://rafatns.vercel.app/downloads/cv.pdf" target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 px-8 py-4 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 hover:bg-cyan-500/30 transition-all min-w-[140px]">
+          <a href={cv} target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 px-8 py-4 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 hover:bg-cyan-500/30 transition-all min-w-[140px]">
             <span className="text-2xl">📄</span>
             <span className="text-white font-semibold text-sm">{t.monCV}</span>
           </a>

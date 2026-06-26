@@ -5,6 +5,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Hero from './components/Hero'
 import Contact from './components/Contact'
+import cv from './assets/CV_Rafael_Antunes_oliveira.pdf'
 
 function App() {
   const { t } = useLanguage()
@@ -16,7 +17,7 @@ function App() {
             {t.bandeauAlternance}
           </p>
           <a
-            href="https://rafatns.vercel.app/downloads/cv.pdf"
+            href={cv}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-cyan-100 font-semibold hover:bg-cyan-400/20 transition"
