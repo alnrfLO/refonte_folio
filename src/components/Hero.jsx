@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../context/useLanguage'
+import { useState, useEffect } from 'react'
 
 const paths = [
   { d: "M16.7563 115.457L32.1951 105.729C33.9786 104.605 36.0897 103.994 38.1491 104.444C51.8692 107.442 53.5973 123.331 52.4755 133.384C52.2824 135.114 51.082 136.535 49.4578 137.162L33.8899 143.174C33.5653 141.802 31.9211 141.237 30.8219 142.12L24.4489 147.239C24.4489 144.775 21.6557 143.349 19.6598 144.794L5.56702 155L12.6207 136.859C13.6336 134.254 10.6318 131.931 8.36434 133.565L17.9212 119.791C18.9579 118.297 18.4023 116.23 16.7563 115.457Z", fill: "url(#paint0_linear_231_42)" },
@@ -21,9 +22,45 @@ const paths = [
 
 
 
+function TypewriterText({ text, delay = 0, speed = 50, showCursor = false, key: externalKey }) {
+  const [displayedText, setDisplayedText] = useState('')
+
+  useEffect(() => {
+    let currentIndex = 0
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        if (currentIndex <= text.length) {
+          setDisplayedText(text.substring(0, currentIndex))
+          currentIndex++
+        } else {
+          clearInterval(interval)
+        }
+      }, speed)
+      return () => clearInterval(interval)
+    }, delay)
+    return () => clearTimeout(timeout)
+  }, [text, delay, speed, externalKey])
+
+  return (
+    <>
+      {displayedText}
+      {showCursor && (
+        <motion.span
+          animate={{ opacity: [1, 0] }}
+          transition={{ duration: 0.8, repeat: Infinity }}
+          className="ml-2 text-white"
+        >
+          |
+        </motion.span>
+      )}
+    </>
+  )
+}
+
 function Hero() {
-  const { t } = useLanguage()
+  const { t, langue } = useLanguage()
   const totalDuration = paths.length * 0.1 + 0.5
+  const name = "Rafael Antunes Oliveira"
 
   return (
     <section id="Accueil" className="flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 text-center">
@@ -65,18 +102,18 @@ function Hero() {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: totalDuration, duration: 0.8, ease: "easeOut" }}
-        className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mt-6"
+        className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mt-6 h-20"
       >
-        Rafael Antunes Oliveira
+        <TypewriterText text={name} delay={totalDuration * 1000} speed={40} showCursor={true} key={`name-${langue}`} />
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: totalDuration + 0.4, duration: 0.6 }}
-        className="text-lg sm:text-xl md:text-2xl text-cyan-400 mt-4"
+        transition={{ delay: totalDuration + 1.8, duration: 0.6 }}
+        className="text-lg sm:text-xl md:text-2xl text-white mt-4"
       >
-        {t.devTitle}
+        <TypewriterText text={t.devTitle} delay={(totalDuration + 1.8) * 1000} speed={30} showCursor={true} key={`subtitle-${langue}`} />
       </motion.p>
     </section>
   )

@@ -37,7 +37,7 @@ function About() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold text-cyan-400 mb-12"
+        className="text-4xl font-bold text-white mb-12"
       >
         {t.apropos}
       </motion.h2>
@@ -51,7 +51,7 @@ function About() {
           viewport={{ once: true }}
           className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6"
         >
-          <h3 className="text-xl font-semibold text-cyan-400 mb-3">{t.introTitle}</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">{t.introTitle}</h3>
           <p className="text-gray-400 leading-relaxed">{t.introText}</p>
         </motion.div>
 
@@ -62,7 +62,7 @@ function About() {
           viewport={{ once: true }}
           className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6"
         >
-          <h3 className="text-xl font-semibold text-cyan-400 mb-3">{t.sportTitle}</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">{t.sportTitle}</h3>
           <ul className="text-gray-400 space-y-2 text-sm">
             <li>🥇 2021 — Compétition internationale, Portugal</li>
             <li>🥇 2021 — Compétition internationale, Luxembourg</li>
@@ -81,7 +81,7 @@ function About() {
           viewport={{ once: true }}
           className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6"
         >
-          <h3 className="text-xl font-semibold text-cyan-400 mb-8">📚 {t.formationTitle}</h3>
+          <h3 className="text-xl font-semibold text-white mb-8">📚 {t.formationTitle}</h3>
           {formation.map((item, i) => <TimelineItem key={i} {...item} index={i} />)}
         </motion.div>
 
@@ -92,7 +92,7 @@ function About() {
           viewport={{ once: true }}
           className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6"
         >
-          <h3 className="text-xl font-semibold text-cyan-400 mb-8">💼 {t.experienceTitle}</h3>
+          <h3 className="text-xl font-semibold text-white mb-8">💼 {t.experienceTitle}</h3>
           {experience.map((item, i) => <TimelineItem key={i} {...item} index={i} />)}
         </motion.div>
       </div>

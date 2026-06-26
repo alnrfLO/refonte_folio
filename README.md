@@ -1,16 +1,73 @@
-# React + Vite
+# Portfolio React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Arborescence du projet
 
-Currently, two official plugins are available:
+```text
+proj/
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── vite.config.js
+└── src/
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    ├── translations.js
+    ├── assets/
+    │   ├── CV_Rafael_Antunes_oliveira.pdf
+    │   ├── rose.svg
+    │   ├── certif/
+    │   │   ├── DIF.png
+    │   │   ├── PSC-ANTUNES-Rafael.pdf
+    │   │   └── PSSM.png
+    │   └── projets/
+    │       ├── 203/
+    │       │   └── 4.png
+    │       ├── 303/
+    │       │   └── 3.png
+    │       ├── BlackJack/
+    │       ├── poker/
+    │       │   ├── 1.png
+    │       │   └── 2.png
+    │       ├── portfolio_sylvain/
+    │       ├── python/
+    │       │   ├── pong/
+    │       │   │   └── 6.png
+    │       │   ├── snake/
+    │       │   │   └── 7.png
+    │       │   └── tetris/
+    │       │       └── 8.png
+    │       ├── tictactoe/
+    │       │   └── 5.png
+    │       ├── Que-regarder-ce-soir/
+    │       │   ├── quereg1.png
+    │       │   └── quereg2.png
+    │       └── wiki/
+    ├── components/
+    │   ├── About.jsx
+    │   ├── Contact.jsx
+    │   ├── Hero.jsx
+    │   ├── Navbar.jsx
+    │   ├── Projects.jsx
+    │   └── Skills.jsx
+    └── context/
+        ├── LanguageContext.jsx
+        └── useLanguage.js
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Démarrage
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+```

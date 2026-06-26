@@ -32,19 +32,19 @@ const skills = [
 ]
 
 const couleurs = {
-  "Frontend": "text-cyan-400",
-  "Backend": "text-blue-400",
-  "Base de données": "text-purple-400",
-  "Outils": "text-green-400",
-  "Langues": "text-yellow-400",
-  "Soft Skills": "text-pink-400",
-  "Certifications": "text-orange-400",
+  "Frontend": "text-white",
+  "Backend": "text-white",
+  "Base de données": "text-white",
+  "Outils": "text-white",
+  "Langues": "text-white",
+  "Soft Skills": "text-white",
+  "Certifications": "text-white",
 }
 
 const certifications = [
-  { nom: "DIF — Diplôme Instructeur Fédéral Karaté", fichier: "photo.png" },
-  { nom: "PSC1 — Premiers Secours", fichier: "photo.png" },
-  { nom: "PSSM — Santé Mentale", fichier: "photo.png" },
+  { nom: "DIF — Diplôme Instructeur Fédéral Karaté", fichier: "/assets/certif/DIF.png" },
+  { nom: "PSC1 — Premiers Secours", fichier: "/assets/certif/PSC-ANTUNES-Rafael.pdf" },
+  { nom: "PSSM — Santé Mentale", fichier: "/assets/certif/PSSM.png" },
 ]
 function Skills() {
   const { t } = useLanguage()
@@ -55,7 +55,7 @@ function Skills() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold text-cyan-400 mb-12"
+        className="text-4xl font-bold text-white mb-12"
       >
         {t.skillsTitle}
       </motion.h2>
@@ -82,10 +82,10 @@ function Skills() {
                     href={cert.fichier}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl border border-orange-400/40 hover:bg-orange-400/10 transition-all group">
-                    <span className="text-orange-400 text-lg">📜</span>
-                    <span className="text-white text-sm group-hover:text-orange-400 transition-colors">{cert.nom}</span>
-                    <span className="ml-auto text-orange-400/50 group-hover:text-orange-400 transition-colors">↗</span>
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl border border-white/40 hover:bg-white/10 transition-all group">
+                    <span className="text-white text-lg">📜</span>
+                    <span className="text-white text-sm group-hover:text-white transition-colors">{cert.nom}</span>
+                    <span className="ml-auto text-white/50 group-hover:text-white transition-colors">↗</span>
                   </a>
                 ))}
               </div>

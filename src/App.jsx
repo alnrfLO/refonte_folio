@@ -1,11 +1,11 @@
 import { useLanguage } from './context/useLanguage'
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar'
 import Skills from './components/Skills'
 import About from './components/About'
 import Projects from './components/Projects'
 import Hero from './components/Hero'
 import Contact from './components/Contact'
-import cv from './assets/CV_Rafael_Antunes_oliveira.pdf'
+const cv = '/assets/CV_Rafael_Antunes_oliveira.pdf'
 
 function App() {
   const { t } = useLanguage()
