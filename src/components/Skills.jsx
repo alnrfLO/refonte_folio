@@ -42,9 +42,9 @@ const couleurs = {
 }
 
 const certifications = [
-  { nom: "DIF — Diplôme Instructeur Fédéral Karaté", fichier: "photo.png" },
-  { nom: "PSC1 — Premiers Secours", fichier: "photo.png" },
-  { nom: "PSSM — Santé Mentale", fichier: "photo.png" },
+  { nom: "DIF — Diplôme Instructeur Fédéral Karaté", fichier: "/src/assets/certif/DIF.png" },
+  { nom: "PSC1 — Premiers Secours", fichier: "/src/assets/certif/PSC-ANTUNES-RAFAEL.pdf" },
+  { nom: "PSSM — Santé Mentale", fichier: "/src/assets/certif/PSSM.png" },
 ]
 function Skills() {
   const { t } = useLanguage()
