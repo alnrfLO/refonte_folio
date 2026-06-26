@@ -10,7 +10,8 @@ const projects = [
   { id: "proj5", titre: "SAE 203", tech: "HTML/CSS/PHP", type: "scolaire", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["photo.png", "photo.png"] },
   { id: "proj6", titre: "SAE 303", tech: "JS/HTML/CSS", type: "scolaire", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["photo.png", "photo.png"] },
   { id: "proj8", titre: "Que regarder ce soir ?", tech: "React", type: "perso", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["photo.png", "photo.png"] },
-  { id: "proj9", titre: "Wiki Yofukashi no uta", tech: "React", type: "perso", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["photo.png", "photo.png"] },
+  { id: "proj9", titre: "Wiki Yofukashi no uta", tech: "React", type: "perso", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["src/assets/projets/wiki/dd.png", "src/assets/projets/wiki/dd.png"] },
+  { id: "proj10", titre: "Poker Game", tech: "React", type: "perso", github: "https://github.com/alnrfLO/poker/", live: "https://poker-murex-seven.vercel.app", photos: ["src/assets/projets/poker/1.png", "src/assets/projets/poker/2.png"] },
 ]
 
 const couleurs = {
@@ -53,7 +54,8 @@ function Modal({ project, onClose }) {
           </div>
 
           <div className="relative mb-6">
-            <img src={project.photos[photoIndex]} alt={`screenshot ${photoIndex + 1}`} className="w-full h-52 object-cover rounded-xl border border-cyan-400/20" />
+            <img src={project.photos[photoIndex]} alt={`screenshot ${photoIndex + 1}`} className="w-full h-full object-contain rounded-xl border border-cyan-400/20 bg-black/30" />
+            <span className="absolute bottom-2 right-2 text-xs text-gray-400 bg-black/50 px-2 py-1 rounded-full">{photoIndex + 1}/{project.photos.length}</span>
             <button onClick={() => setPhotoIndex(i => (i === 0 ? project.photos.length - 1 : i - 1))} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center">‹</button>
             <button onClick={() => setPhotoIndex(i => (i === project.photos.length - 1 ? 0 : i + 1))} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center">›</button>
             <div className="flex justify-center gap-2 mt-3">
