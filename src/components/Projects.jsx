@@ -12,6 +12,8 @@ const projects = [
   { id: "proj8", titre: "Que regarder ce soir ?", tech: "React", type: "perso", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["photo.png", "photo.png"] },
   { id: "proj9", titre: "Wiki Yofukashi no uta", tech: "React", type: "perso", github: "https://github.com/alnrfLO/yofukashi-no-uta/", live: "https://github.com/alnrfLO/yofukashi-no-uta/", photos: ["src/assets/projets/wiki/dd.png", "src/assets/projets/wiki/dd.png"] },
   { id: "proj10", titre: "Poker Game", tech: "React", type: "perso", github: "https://github.com/alnrfLO/poker/", live: "https://poker-murex-seven.vercel.app", photos: ["src/assets/projets/poker/1.png", "src/assets/projets/poker/2.png"] },
+  { id: "proj11", titre: "SAE 401", tech: "PHP", type: "scolaire", github: "https://github.com/alnrfLO/SAE401", live: "https://international.iut-bobigny.univ-paris13.fr/~fav/", photos: ["src/assets/projets/iobc/1.png", "src/assets/projets/iobc/2.png"] },
+  { id: "proj12", titre: "Portfolio Sylvain Belevindiran", tech: "React/CSS", type: "perso", github: "https://github.com/alnrfLO/portfolio_sylvain", live: "https://international.iut-bobigny.univ-paris13.fr/~fav/", photos: ["src/assets/projets/iobc/1.png", "src/assets/projets/iobc/2.png"] },
 ]
 
 const couleurs = {
